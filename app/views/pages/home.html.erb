@@ -1,2 +1,59 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<header>
+        <div class="logo">
+            <%= image_tag 'logo.png', alt: 'Rent a Girlfriend Logo', id: 'logo-img' %>
+        </div>
+        <div class="auth-buttons">
+            <button onclick="window.location.href='#signup'">Sign Up</button>
+            <button onclick="window.location.href='#login'">Login</button>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>Find Your Perfect Match for Any Occasion!</h1>
+        <p>Rent a girlfriend for dates, events, or just to hang out. Our service connects you with friendly and reliable companions.</p>
+    </section>
+
+    <section class="features">
+        <div class="feature">
+            <h3>Verified Profiles</h3>
+            <p>All our members are thoroughly verified for your safety and comfort.</p>
+        </div>
+        <div class="feature">
+            <h3>Easy Booking</h3>
+            <p>Book your date with just a few clicks.</p>
+        </div>
+        <div class="feature">
+            <h3>Flexible Plans</h3>
+            <p>Choose a plan that suits your needs and budget.</p>
+        </div>
+    </section>
+
+    <section class="preview">
+        <h2>See How It Works</h2>
+        <div class="preview-slider">
+            <div class="slide">
+                <p>Sign up and create your profile</p>
+            </div>
+            <div class="slide">
+                <p>Browse through available profiles</p>
+            </div>
+            <div class="slide">
+                <p>Easy and quick booking process</p>
+            </div>
+            <div class="slide">
+                <p>Chat with your chosen companion</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="social-media">
+        </div>
+        <div class="contact-info">
+            <p>Contact us at: info@example.com</p>
+        </div>
+        <div class="legal-links">
+            <a href="#terms-of-service">Terms of Service</a>
+            <a href="#privacy-policy">Privacy Policy</a>
+        </div>
+    </footer>
