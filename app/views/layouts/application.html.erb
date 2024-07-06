@@ -11,6 +11,33 @@
   </head>
 
   <body>
+    <header>
+        <div class="logo">
+            <%= image_tag 'logo.png', alt: 'Rent a Girlfriend Logo', id: 'logo-img' %>
+        </div>
+        <div class="auth-buttons">
+          <% if user_signed_in? %>
+            <%= link_to "Profile", edit_user_registration_path, class: "btn btn-success" %>
+            <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "btn btn-danger" %>
+          <% else %>
+            <%= link_to "Login", new_user_session_path, class: "btn btn-success" %>
+            <%= link_to "Sign up", new_user_registration_path, class: "btn btn-success" %>
+          <% end %>
+
+        </div>
+    </header>
     <%= yield %>
+
+    <footer class="footer">
+        <div class="social-media">
+        </div>
+        <div class="contact-info">
+            <p>Contact us at: info@example.com</p>
+        </div>
+        <div class="legal-links">
+            <a href="#terms-of-service">Terms of Service</a>
+            <a href="#privacy-policy">Privacy Policy</a>
+        </div>
+    </footer>
   </body>
 </html>
