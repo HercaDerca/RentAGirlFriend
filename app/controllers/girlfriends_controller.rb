@@ -4,6 +4,7 @@ class GirlfriendsController < ApplicationController
   end
 
   def show
+    @offer = Offer.new
     @girlfriend = Girlfriend.find(params[:id])
   end
 
@@ -12,7 +13,7 @@ class GirlfriendsController < ApplicationController
   end
 
   def create
-    @girlfriend = Girlfriend.new(params[:girlfriend])
+    @girlfriend = Girlfriend.new(girlfriend_params)
     @girlfriend.user = current_user
     @girlfriend.save
     redirect_to girlfriend_path(@girlfriend)
