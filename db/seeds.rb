@@ -13,18 +13,11 @@ require 'faker'
 puts "cleaning the daabase..."
 Girlfriend.destroy_all
 puts "seeding a database..."
-
-
-puts "seeding a database..."
 20.times do
-  Girlfriend.create(
-    name: Faker::Name.name,
-    location: Faker::Address.city,
-    hourly_rate: Faker::Number.between(from: 10, to: 50),
-    availability: Faker::Boolean.boolean,
-    bio: Faker::Lorem.paragraph,
-    user_id: 1,
+  Offer.create(
+    message: "Sample message",
+    date_offered: Date.today + rand(365),
+    girlfriend_id: Girlfriend.last.id,
+    user_id: User.last.id
   )
 end
-puts "seeding completed!"
-puts "you have #{Girlfriend.count} girlfriends in your database!"
