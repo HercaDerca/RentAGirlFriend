@@ -14,6 +14,15 @@ puts "cleaning the daabase..."
 Girlfriend.destroy_all
 puts "seeding a database..."
 20.times do
+  Girlfriend.create(
+    name: Faker::Name.name,
+    age: Faker::Number.between(from: 18, to: 40),
+    location: Faker::Address.city,
+    bio: Faker::Lorem.paragraph,
+    user_id: User.last.id
+  )
+end
+20.times do
   Offer.create(
     message: "Sample message",
     date_offered: Date.today + rand(365),

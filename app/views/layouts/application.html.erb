@@ -13,17 +13,16 @@
   <body>
     <header>
         <div class="logo">
-            <%= image_tag 'logo.png', alt: 'Rent a Girlfriend Logo', id: 'logo-img' %>
+           <%= link_to image_tag('logo.png', alt: 'Rent a Girlfriend Logo', id: 'logo-img'), root_path %>
         </div>
         <div class="auth-buttons">
           <% if user_signed_in? %>
-            <%= link_to "Profile", edit_user_registration_path, class: "btn btn-success" %>
-            <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "btn btn-danger" %>
+            <%= link_to "Girlfriends", girlfriends_path, class: "btn" %>
+            <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "btn" %>
           <% else %>
-            <%= link_to "Login", new_user_session_path, class: "btn btn-success" %>
-            <%= link_to "Sign up", new_user_registration_path, class: "btn btn-success" %>
+            <%= link_to "Login", new_user_session_path, class: "btn" %>
+            <%= link_to "Sign up", new_user_registration_path, class: "btn" %>
           <% end %>
-
         </div>
     </header>
     <%= yield %>
