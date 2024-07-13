@@ -3,7 +3,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  background-color: white;
 }
 
 /* Header */
@@ -35,8 +35,10 @@ header .logo {
 .hero h1, .hero p {
   color: #ffffff;
   background-color: rgba(159, 194, 204, 0.5);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   padding: 10px;
   border-radius: 5px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 /* Features Section */
@@ -95,14 +97,39 @@ header .logo {
 
 /* Preview Section */
 .preview {
-  background-color: #f9f9f9;
-  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background-color: white;
+}
+
+.slide {
+  background-color: #fff; /* Card background color */
+  border: 1px solid #ddd; /* Card border */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Card shadow */
+  padding: 20px; /* Padding inside the card */
+  border-radius: 5px; /* Optional: Rounded corners for the card */
+  margin-bottom: 30px; /* Adjusted spacing between slides */
+  flex: 0 0 auto; /* Prevents flex items from growing or shrinking */
+  &:last-child {
+    margin-bottom: 0; /* Removes margin from the last slide */
+  }
+
+  p {
+    font-size: 18px; /* Adjust font size as needed */
+    color: #333; /* Adjust text color as needed */
+    font-weight: bold; /* Makes the text bold */
+    margin: 0 0 10px; /* Adds space below the text */
+  }
 }
 
 .preview-slider {
   display: flex;
   overflow-x: auto;
+  gap: 20px; /* Adds space between slides */
 }
 
 .preview-slider .slide {
@@ -117,8 +144,63 @@ header .logo {
 
 /* Footer */
 footer {
+  text-align: center;
   background-color: #9FC2CC;
-  color: white;
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds text shadow */
+  .preview-slider {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px; /* Adds space between slides */
+  margin-top: 20px; /* Adds margin on top */
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between; // Adjusts children to be on opposite ends; you can change this as needed
+  align-items: center; // Centers children vertically
+  height: 120px;
+}
+
+.footer-img, .footer-links {
+  flex: 1; // Allows both children to grow and take up equal space, adjust as necessary
+}
+
+.footer-img {
+  // Your existing styles seem correct for aligning the image to the left
+  display: flex;
+  justify-content: flex-start; // Keeps the image aligned to the left
+  align-items: center; // Centers the image vertically
+}
+
+.footer-img img {
+  max-width: 500px; // Adjusts the maximum width of the image
+  max-height: 120px; // Adjusts the maximum height of the image
+  // Add other properties as needed, for example, to maintain aspect ratio
+  object-fit: contain; // This ensures the image's aspect ratio is maintained while fitting within the specified dimensions
+}
+
+.footer-links {
+  // Your existing styles for .footer-links
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-links span {
+  // Your existing styles for span inside .footer-links
+  font-size: 1.2em;
+  margin: 5px 0; // Adjusted to ensure consistency in spacing
+}
+
+.preview-slider .slide {
+
+  flex: 0 0 auto;
+  padding-top: 30px; /* Adds padding on top */
+  padding-bottom: 30px; /* Adds padding on bottom */
+}
   padding: 20px;
   text-align: center;
 }
@@ -152,7 +234,6 @@ footer .legal-links a {
   background-size: cover;
 }
 
-.preview {
-  background-image: asset-url('preview.jpg');
-  background-size: cover;
+.gf-header{
+  padding-bottom: 60px;
 }

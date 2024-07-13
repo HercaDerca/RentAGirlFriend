@@ -4,13 +4,13 @@
     <p><%= @girlfriend.bio %></p>
   </div>
 </div>
-
-<div class="container text-center">
+<div class="container text-center gf-card">
+  <h1 class="gf-header">Learn more about <strong><%= @girlfriend.name %></strong></h1>
   <div class="row">
     <div class="col">
       1 of 2
-      <div class="card text-position">
-        <div class="card-body">
+      <div class="card text-position card-bdy">
+        <div class="card-body card-bdy">
           <h2>Location:<strong> <%= @girlfriend.location %></strong></h2>
           <hr>
           <h2>Age:<strong> <%= @girlfriend.age %></strong></h2>
@@ -22,9 +22,9 @@
     <div class="col">
       2 of 2
 
-      <div class="card text-position">
+      <div class="card text-position card-bdy">
 
-        <div class="card-body">
+        <div class="card-body card-bdy">
         <h3>Booking a date with <strong><%= @girlfriend.name %></strong> means that you agree to our <strong>terms and conditions</strong> as they are listed here</h3>
         <button type="button" class="btn btn-primary modal-show" data-bs-toggle="modal" data-bs-target="#exampleModal">
           Book a date
