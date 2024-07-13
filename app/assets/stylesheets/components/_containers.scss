@@ -16,3 +16,9 @@
     margin-top: 45px;
   }
 }
+
+.img-fluid {
+  height: 400px; /* or any desired height */
+  width: 100%; /* Adjust width as needed, 100% makes it responsive */
+  object-fit: cover; /* This prevents stretching */
+}
