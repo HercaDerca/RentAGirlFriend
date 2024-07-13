@@ -1,6 +1,7 @@
 class GirlfriendsController < ApplicationController
   def index
     @girlfriends = Girlfriend.all
+    @girlfriend = Girlfriend.new
   end
 
   def show
