@@ -1,0 +1,19 @@
+.card-product {
+  border-radius: 10px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.24);
+  border: 2px solid rgba(7, 7, 7, 0.12);
+
+  .card-img {
+    border-radius: 10px 10px 0 0; // Applies border-radius to the top corners only
+  }
+}
+.gf-card {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.card-bdy {
+  border-radius: 10px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.24);
+  border: 2px solid rgba(7, 7, 7, 0.12);
+}

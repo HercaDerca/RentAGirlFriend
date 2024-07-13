@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ChangeThisToYourRailsAppName</title>
+    <title>Rent a Girlfriend</title>
+    <link rel="icon" type="image/png" href="<%= asset_path('web-ico.png') %>">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -29,6 +30,19 @@
         </div>
     </header>
     <%= yield %>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-img">
+          <%= image_tag("footer-logo.png", alt: "Footer Image", class: "footer-image") %>
+        </div>
+        <div class="footer-links">
+          <span>Terms and Conditions</span>
+          <span>About Us</span>
+          <span>Contact Us</span>
+        </div>
+      </div>
+    </footer>
 
   </body>
 </html>
