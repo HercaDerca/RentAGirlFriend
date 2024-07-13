@@ -12,6 +12,7 @@ require 'faker'
 
 puts "cleaning the daabase..."
 Girlfriend.destroy_all
+Offer.destroy_all
 puts "seeding a database..."
 20.times do
   Girlfriend.create(
@@ -22,11 +23,4 @@ puts "seeding a database..."
     user_id: User.last.id
   )
 end
-20.times do
-  Offer.create(
-    message: "Sample message",
-    date_offered: Date.today + rand(365),
-    girlfriend_id: Girlfriend.last.id,
-    user_id: User.last.id
-  )
-end
+

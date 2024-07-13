@@ -1,6 +1,7 @@
 class GirlfriendsController < ApplicationController
   def index
     @girlfriends = Girlfriend.all
+    @girlfriend = Girlfriend.new
   end
 
   def show
@@ -29,6 +30,6 @@ class GirlfriendsController < ApplicationController
   private
 
   def girlfriend_params
-    params.require(:girlfriend).permit(:name, :location, :pfp, :hourly_rate, :age)
+    params.require(:girlfriend).permit(:name, :location, :pfp, :hourly_rate, :age, :photo, :bio)
   end
 end
